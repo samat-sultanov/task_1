@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<h1>Calculator</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label>First Number:   </label><br>
+    <input type="number" name="first_num" required/><br><br>
+    <label>Second Number:   </label><br>
+    <input type="number" name="second_num" required/><br><br>
+    <br>
+    <input type="radio" id="math_add" name="user_math" value="+">
+    <label for="math_add"> add</label><br>
+    <input type="radio" id="math_subtract" name="user_math" value="-">
+    <label for="math_subtract"> subtract</label><br>
+    <input type="radio" id="math_multiply" name="user_math" value="*">
+    <label for="math_multiply"> multiply</label><br>
+    <input type="radio" id="math_divide" name="user_math" value="/">
+    <label for="math_divide"> divide</label><br><br><br>
+    <input type="submit" value="Calculate">
+</form>
+</body>
+</html>
